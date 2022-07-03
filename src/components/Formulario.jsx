@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import { v4 as uuidv4 } from "uuid";
 import { useFormulario } from "../hooks/useFormulario";
+import "../styles/formulario.css";
 
 export default function Formulario({ agregarTodo }) {
   const initialState = {
@@ -52,50 +53,57 @@ export default function Formulario({ agregarTodo }) {
 
   return (
     <>
-      <h3>Agregar TODO</h3>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          className="form-control mb 2"
-          name="nombre"
-          placeholder="ingrese todo nombre"
-          value={nombre}
-          onChange={handleChange}
-        />
-        <textarea
-          className="form-control mb-2"
-          name="descripcion"
-          placeholder="Ingrese descripcion"
-          value={descripcion}
-          onChange={handleChange}
-        />
-
-        <select
-          name="estado"
-          className="form-control mb-2"
-          value={estado}
-          onChange={handleChange}
-        >
-          <option value="pendiente">Pendiente</option>
-          <option value="completado">Completado</option>
-        </select>
-        <div className="form-check">
+      <div className="form-header">
+        <h3>Agregar TODO</h3>
+      </div>
+      <div className="form-container">
+        <form onSubmit={handleSubmit} className="formulario">
           <input
-            className="form-check-input"
-            type="checkbox"
-            id="flexCheckDefault"
-            name="prioridad"
-            checked={prioridad}
+            type="text"
+            className="form-control mb-3"
+            name="nombre"
+            placeholder="ingrese todo nombre"
+            value={nombre}
             onChange={handleChange}
           />
-          <label className="form-check-label" htmlFor="flexCheckDefault">
-            Prioritario
-          </label>
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Agregar
-        </button>
-      </form>
+          <textarea
+            className="form-control mb-3"
+            name="descripcion"
+            placeholder="Ingrese descripcion"
+            rows={5}
+            value={descripcion}
+            onChange={handleChange}
+          />
+
+          <select
+            name="estado"
+            className="form-control mb-2"
+            value={estado}
+            onChange={handleChange}
+          >
+            <option value="pendiente">Pendiente</option>
+            <option value="completado">Completado</option>
+          </select>
+          <div className="form-check">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              id="flexCheckDefault"
+              name="prioridad"
+              checked={prioridad}
+              onChange={handleChange}
+            />
+            <label className="form-check-label" htmlFor="flexCheckDefault">
+              Prioritario
+            </label>
+          </div>
+          <div className="btn-container">
+            <button type="submit" className="btn-todo">
+              Agregar
+            </button>
+          </div>
+        </form>
+      </div>
     </>
   );
 }

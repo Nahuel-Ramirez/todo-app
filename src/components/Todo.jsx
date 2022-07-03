@@ -1,9 +1,11 @@
+import "../styles/todo.css";
+
 export default function Todo({ todo, eliminarTodo, editarTodo }) {
   const { id, nombre, descripcion, estado, prioridad } = todo;
 
   return (
-    <li className="list-group-item d-flex justify-content-between align-items-start">
-      <div className="ms-2 me-auto">
+    <li className="list-group-item d-flex justify-content-between align-items-start list-todo">
+      <div className="ms-2 me-auto todo-container">
         <div className="fw-bold">
           {nombre} ({estado ? "Finalizado" : "Pendiente"})
         </div>

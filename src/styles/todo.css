@@ -1,0 +1,16 @@
+.list-todo {
+  background-color: #f4a261;
+  color: #264653;
+  margin: auto;
+  border: none;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  max-width: 100%;
+  border: none;
+}
