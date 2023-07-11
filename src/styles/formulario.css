@@ -1,10 +1,11 @@
 body {
-  background-color: #f4a261;
+  background-color: #3b234a;
 }
 
 h1 {
   text-align: center;
   margin-bottom: 30px;
+  color: #d4c7bf;
 }
 
 .form-header {
@@ -12,8 +13,12 @@ h1 {
   margin: auto;
   padding: 10px;
   width: 400px;
-  background-color: #264653;
-  color: #fff;
+  background-color: #523961;
+  color: #d4c7bf;
+}
+
+label{
+  color: #d4c7bf;
 }
 
 .form-container {
@@ -34,17 +39,22 @@ textarea {
 }
 
 .btn-todo {
-  background-color: #264653;
-  color: #fff;
+  background-color: #523961;
+  color: #d4c7bf;
   border: none;
   font-size: 20px;
   border-radius: 5px;
   width: 400px;
   height: 40px;
-
+  transition: all 1s;
   max-width: 100%;
 }
 .btn-container {
   display: flex;
   justify-content: center;
+}
+.btn-todo:hover {
+  transition: all 0.3s;
+  background-color: #baafc4;
+  color: #523961;
 }

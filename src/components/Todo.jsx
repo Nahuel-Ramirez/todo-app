@@ -12,7 +12,7 @@ export default function Todo({ todo, eliminarTodo, editarTodo }) {
         <p>{descripcion}</p>
         <div>
           <button
-            className="btn btn-danger me-2"
+            className="btn btn-eliminar me-2"
             onClick={() => {
               eliminarTodo(id);
             }}
@@ -20,7 +20,7 @@ export default function Todo({ todo, eliminarTodo, editarTodo }) {
             Eliminar
           </button>
           <button
-            className="btn btn-warning"
+            className="btn btn-editar"
             onClick={() => {
               editarTodo(id);
             }}
