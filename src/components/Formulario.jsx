@@ -54,7 +54,7 @@ export default function Formulario({ agregarTodo }) {
   return (
     <>
       <div className="form-header">
-        <h3>Agregar TODO</h3>
+        <h3>Agregue su tarea</h3>
       </div>
       <div className="form-container">
         <form onSubmit={handleSubmit} className="formulario">
@@ -62,14 +62,14 @@ export default function Formulario({ agregarTodo }) {
             type="text"
             className="form-control mb-3"
             name="nombre"
-            placeholder="ingrese todo nombre"
+            placeholder="Ingrese nombre de la tarea..."
             value={nombre}
             onChange={handleChange}
           />
           <textarea
             className="form-control mb-3"
             name="descripcion"
-            placeholder="Ingrese descripcion"
+            placeholder="Ingrese descripcion de la tarea..."
             rows={5}
             value={descripcion}
             onChange={handleChange}

@@ -1,8 +1,9 @@
 .list-todo {
-  background-color: #f4a261;
-  color: #264653;
+  background-color: #523961;
+  color: #d4c7bf;
   margin: auto;
   border: none;
+  margin-bottom: 15px;
 }
 
 .todo-container {
@@ -10,7 +11,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 500px;
+  width: 450px;
   max-width: 100%;
-  border: none;
+  border: none
+  
+}
+
+.btn-eliminar{
+  color: #d4c7bf;
+  border: 1px solid #941f1f;
+}
+
+.btn-editar{
+  color: #d4c7bf;
+  border: 1px solid #f4d279;
 }
